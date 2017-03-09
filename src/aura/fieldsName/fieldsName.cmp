@@ -1,0 +1,71 @@
+<aura:component >
+	<!-- PAGE HEADER -->
+	<div class="slds-page-header" role="banner">
+    	<div class="slds-grid">
+			<div class="slds-col">
+				<p class="slds-text-heading--label">Accounts</p>
+				<h1 class="slds-text-heading--medium">My Accounts</h1>
+   			 </div>
+       </div>
+    </div>
+  
+  <div class="slds-grid">
+
+  <div class="slds-col">fields</div>
+          
+     <div class="slds-col">Operator</div>
+        
+  <div class="slds-col">Value</div>
+        </div>
+<div class="slds-grid">
+
+  <div class="slds-col"><ui:inputSelect >
+        		<ui:inputSelectOption text="--None--" value="true"/>
+        		<ui:inputSelectOption text="Account Name" />
+        		<ui:inputSelectOption text="Account Site"/>
+      			<ui:inputSelectOption text="Billing Address" />
+        		<ui:inputSelectOption text="Billing Street"/>
+      			<ui:inputSelectOption text="Billing City" />
+        		<ui:inputSelectOption text="Billing State"/>
+      			<ui:inputSelectOption text="Billing Zip" />
+        	</ui:inputSelect></div>
+
+  <div class="slds-col">  <ui:inputSelect >
+        		<ui:inputSelectOption text="--None--" value="true"/>
+        		<ui:inputSelectOption text="equals" />
+        		<ui:inputSelectOption text="no equal to"/>
+      			<ui:inputSelectOption text="starts with" />
+        		<ui:inputSelectOption text="contains"/>
+			</ui:inputSelect></div>
+
+  <div class="slds-col">
+        <div class="slds-form-element__control">
+            <ui:inputText aura:id="expname" 
+
+                          class="slds-input"
+			labelClass="slds-form-element__label"
+		
+                          required="true"/>
+		</div>
+
+      </div>
+
+</div>
+    <div class="slds-form-element">
+          <ui:button label="Search"
+              class="slds-button slds-button--brand"
+             />
+      </div>
+    
+    <!--Example of dynamic Input selection population-->
+
+<div class="row">
+<p class="title">Dynamic Option Generation</p>
+<ui:inputSelect label="Select me: " class="dynamic" aura:id="InputSelectDynamic"
+change="{!c.onChange}" />
+<p>Selected Items:</p>
+<p><ui:outputText class="result" aura:id="dynamicResult" value="" /></p>
+</div>
+  
+    
+</aura:component>

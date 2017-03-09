@@ -1,0 +1,5 @@
+<aura:component >
+    <c:fieldsName />
+    <c:FilterLogic />
+    <c:AccountList />
+</aura:component>
